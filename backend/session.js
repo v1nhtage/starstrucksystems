@@ -56,14 +56,14 @@ const erouter = (cacheEngine, settings, permissions, automation) => {
         let pfp = await cacheEngine.fetchpfp(data.uid);
 
         let embed = new discord.MessageEmbed()
-            .setTitle(gmsg(game?.embedtitle|| `%TYPE% is now being hosted and will commence shortly!`))
+            .setTitle(gmsg(game?.embedtitle|| `A $TARSTRUCK Shift is now being hosted and is starting soon!`))
             .setColor('GREEN')
             .setTimestamp()
             .setAuthor(username, pfp, `https://www.roblox.com/users/${data.uid}`)
-            .setDescription(gmsg(game?.embedbody || `A %TYPE% is now being hosted by %HOST%! Join the game below to attend this session.`))
-            .addField('Gamelink', `https://www.roblox.com/games/${data.type.gid}/-`, true)
+            .setDescription(gmsg(game?.embedbody || `A %TYPE% is now being hosted by %HOST%! Join our Homestore using the link below to join us.`))
+            .addField('$TARSTRUCK Homestore:', `https://www.roblox.com/games/${data.type.gid}/-`, true)
             .setImage(data.thumbnail)
-            .setFooter({ text: `Tovy Sessions` });
+            .setFooter({ text: `$TARSTRUCK Systems` });
 
         let components = new discord.MessageActionRow()
             .addComponents(
@@ -110,8 +110,8 @@ const erouter = (cacheEngine, settings, permissions, automation) => {
             .setColor('RED')
             .setTimestamp()
             .setAuthor(username, pfp, `https://www.roblox.com/users/${data.uid}`)
-            .setDescription(`The ${data.type.name} hosted by ${username} has ended! We will host more very soon don't worry`)
-            .setFooter({ text: `Tovy sessions` });
+            .setDescription(`The ${data.type.name} hosted by ${username} has ended! Missed the shift? Don't worry, $TARSTRUCK has more shifts to come!`)
+            .setFooter({ text: `$TARSTRUCJ Systems` });
 
 
         let msg = await webhookc.editMessage(data.did, { content: null, embeds: [embed], components: [] }).catch(err => {
