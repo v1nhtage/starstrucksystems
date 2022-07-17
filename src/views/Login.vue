@@ -8,10 +8,10 @@
           <v-stepper-items>
             <v-stepper-content class="mx-n2 mt-n6" step="1">
               <v-card-text class="mt-n5 ml-n4 mt-n2 mt-n2 grey--text">
-                Login to tovy with your tovy credentials
+                Login in $TARSTRUCK Staff Portal with your credientials. Do not use your Roblox login.
               </v-card-text>
               <v-alert type="error" v-if="error" class="mt-n2" color="red">
-                We could not find an account with that username and password</v-alert
+                We could not find an account with that username and password.</v-alert
               >
               <v-form ref="form" v-model="valid" lazy-validation>
                 <v-text-field
@@ -25,7 +25,7 @@
                 <v-text-field
                   v-model="password"
                   outlined
-                  label="Password (not roblox password)"
+                  label="Password (not your Roblox password)"
                   hint="Not your roblox password, the password for this site"
                   class="mt-3"
                   hide-details="auto"
