@@ -6,7 +6,7 @@
           Hi {{ this.$store.state.user.displayName }},
         </p>
         <p class="text-body-1 font-weight-bold mt-n5 gray">
-          Lets track some activity!
+          Let's track some activity.
         </p>
       </v-container>
     </v-sheet>
@@ -36,9 +36,9 @@
       <v-row>
         <v-col order="last">
           <v-card :loading="loading.best" outlined class="pb-1 mb-2">
-            <v-card-title> Best </v-card-title>
+            <v-card-title> Most active </v-card-title>
             <v-card-text class="mt-n6">
-              The staff who spent the most time ingame since the last reset
+              Staff members with the most amount of time at $TARSTRUCK's Homestore
             </v-card-text>
 
             <p class="ml-4 mb-6 mt-n4" v-if="!best.length">No data</p>
@@ -67,9 +67,9 @@
         </v-col>
         <v-col order="last">
           <v-card :loading="loading.out" outlined class="pb-1 mb-2">
-            <v-card-title> Inactive </v-card-title>
+            <v-card-title> Inactive Notices </v-card-title>
             <v-card-text class="mt-n6">
-              People with approved inactivity notices that are active
+              Staff members with inactive notices who have spent time at the Homestore
             </v-card-text>
 
             <p class="ml-4 mt-n4" v-if="!off.length">No data</p>
